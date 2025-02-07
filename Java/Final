@@ -1,0 +1,20 @@
+package week2;
+
+final class Final {
+    
+        public void displayMessage() {
+            System.out.println("This is a final class and cannot be extended.");
+        }
+    }
+
+    class ParentClass {
+        final int finalVariable = 100;
+
+        final void finalMethod() {
+            System.out.println("This is a final method and cannot be overridden.");
+        }
+    }
+
+    class SubClass extends ParentClass {
+        // Attempting to override finalMethod() would result in a compilation error
+    }
