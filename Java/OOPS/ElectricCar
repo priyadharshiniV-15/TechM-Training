@@ -1,0 +1,22 @@
+package week2;
+
+public class ElectricCar extends Car {
+    private int batteryCapacity;
+
+    public ElectricCar(String make,String model,int year,int batteryCapacity) {
+       super(make,model,year);
+        this.batteryCapacity = batteryCapacity;
+    }
+    public int getBatteryCapacity() {
+        return batteryCapacity;
+    }
+    public void setBatteryCapacity(int batteryCapacity) {
+        this.batteryCapacity = batteryCapacity;
+    }
+    public  void chargeBattery() {
+        System.out.println("Battery is being charged for "+getMake()+" "+getModel()+" "+getYear()+" "+batteryCapacity);
+    }
+
+    }
+
+
