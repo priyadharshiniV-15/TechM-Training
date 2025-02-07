@@ -1,0 +1,20 @@
+package week2;
+
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        Car[] c = new Car[4];
+
+        c[0] = new Car("Ford", "F-150", 2000);
+        c[1] = new Car("Toyota", "camry", 2012);
+        c[2] = new Car("Tesla", "Model 3", 2003);
+        c[3] = new ElectricCar("Nissan", "Leaf", 2020, 150);
+
+
+        for (Car cr : c) {
+            cr.startEngine();
+        }
+    }
+
+}
