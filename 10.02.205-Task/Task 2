@@ -1,0 +1,25 @@
+public class Practice2 {
+     public static void main(String[] args)
+     {   Practice2 objErr = new Practice2();
+    	 Practice2.print();
+    	 Practice2.println();
+    	 objErr.printError();
+     }
+      public static void print() {
+    	  System.out.print("Hi");
+  		  System.out.print("Hello");
+      }
+      
+      public  static void println() {
+    	  System.out.println("Good to see you");
+  		System.out.println("Welcome home");
+  		System.out.println("Thank you");
+    	  
+      }
+      
+      public void printError() {
+    	  System.err.println("It's an error");
+  		System.err.println("rectify it");
+      }
+
+}
