@@ -1,0 +1,32 @@
+package Prgm1;
+
+public class Primitive {
+	
+	    public static void modifyValues(int num, int[] arr) {
+	        num = num * 2; // Modifying the integer (primitive type)
+	        arr[0] = arr[0] * 2; // Modifying the array (reference type)
+	    }
+	    
+	    public static void main(String[] args) {
+	        int num = 10;
+	        int[] arr = {5, 10, 15};
+	        
+	        System.out.println("Before method call:");
+	        System.out.println("Integer: " + num);
+	        System.out.print("Array: ");
+	        for (int i : arr) {
+	            System.out.print(i + " ");
+	        }
+	        System.out.println();
+	        
+	        modifyValues(num, arr);
+	        
+	        System.out.println("After method call:");
+	        System.out.println("Integer: " + num); // Unchanged
+	        System.out.print("Array: ");
+	        for (int i : arr) {
+	            System.out.print(i + " ");
+	        }
+	        System.out.println();
+	    }
+	}
