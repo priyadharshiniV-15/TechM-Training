@@ -1,0 +1,94 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+public class CreateFile{
+	public static void main(String[] args)throws IOException {
+//		CreateFile.createFile();
+//		CreateFile.createFolder();
+//		CreateFile.createFolderWithFile();
+		 Scanner scanner = new Scanner(System.in);
+	        
+	        System.out.println("Choose an option:");
+	        System.out.println("1. Create a file");
+	        System.out.println("2. Create a folder");
+	        System.out.println("3. Create a folder with a file inside it");
+	        int choice = scanner.nextInt();
+	        
+	        switch (choice) {
+	            case 1:
+	                createFile();
+	                break;
+	            case 2:
+	                createFolder();
+	                break;
+	            case 3:
+	                createFolderWithFile();
+	                break;
+	            default:
+	                System.out.println("Invalid choice.");
+	        }
+	        
+	        scanner.close();
+	    }
+
+	
+	
+public static void createFile() {
+		String path ="C://Users//shiva//OneDrive//Desktop//Tech Mahindra Training//TechM.txt";
+		File f = new File(path);
+		String path1 ="C://Users//shiva//OneDrive//Desktop//Tech Mahindra Training//Shivangi.txt";
+		File f1 = new File(path1);
+		String path2 ="C://Users//shiva//OneDrive//Desktop//Tech Mahindra Training//Dayaa.txt";
+		File f2 = new File(path2);
+		try {
+			FileWriter v1 =new FileWriter(f);
+			FileWriter v2 =new FileWriter(f1);
+			FileWriter v3 =new FileWriter(f2);
+			
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	public static void createFolder() {
+		String path ="C://Users//shiva//OneDrive//Desktop//Tech Mahindra Training/Daily Task";
+		File folder = new File(path);
+		if (!folder.exists()) {
+		    folder.mkdir();
+		}
+		String path1 ="C://Users//shiva//OneDrive//Desktop//Tech Mahindra Training/Daily Task1";
+		File folder1 = new File(path1);
+		if (!folder1.exists()) {
+		    folder1.mkdir();
+		}
+	}
+		
+		public static void createFolderWithFile() {
+	        String folderPath = "C://Users//shiva//OneDrive//Desktop//Tech Mahindra Training//NewFolder";
+	        String filePath = folderPath + "//NewFile.txt";
+	        String folderPath1 = "C://Users//shiva//OneDrive//Desktop//Tech Mahindra Training//NewFolder1";
+	        String filePath1 = folderPath1 + "//NewFile.txt";
+
+
+	        File folder = new File(folderPath);
+	        File folder1 = new File(folderPath1);
+	        if (!folder.exists()) {
+	            folder.mkdir();
+	        }
+	        if (!folder1.exists()) {
+	            folder1.mkdir();
+	        }
+
+	        File file = new File(filePath);
+	        File file1 = new File(filePath1);
+	        try {
+	            FileWriter c1 = new FileWriter(file);
+	            FileWriter c2 = new FileWriter(file1);
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	    }
+}
