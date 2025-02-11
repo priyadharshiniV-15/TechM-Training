@@ -1,0 +1,47 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
+public class Practice3 {
+  public static void main(String[] args) throws IOException
+  {
+	  Practice3.bufferMethod();
+	  Practice3 obj2 = new Practice3();
+	  obj2.scannerMethod();
+  }
+   
+  public static void bufferMethod() throws IOException{
+	   
+	         
+	    BufferedReader r = new BufferedReader(
+	    new InputStreamReader(System.in));
+	    System.out.println("Enter the input:");
+	    String s = r.readLine();
+	    System.out.println("Enter the input:");
+	    int i =Integer.parseInt(r.readLine());
+	    System.out.println("Enter the input:");
+	    float f =Float.parseFloat(r.readLine());
+	    System.out.println("The given input:"+s);
+	    System.out.println("The given input:"+i);
+	    System.out.println("The given input:"+f);
+  
+	   
+  }
+public void scannerMethod() {
+	Scanner sc =new Scanner(System.in);
+	System.out.println("Enter the string:");
+	String str =  sc.nextLine();
+	System.out.println("Enter the number:");
+	int num = sc.nextInt();
+	System.out.println("Enter the floatnum:");
+	float flt =sc.nextFloat();
+	 System.out.println("The given input:"+str);
+	 System.out.println("The given input:"+num);
+	 System.out.println("The given input:"+flt);
+	 sc.close();
+	
+
+	
+}
+}
