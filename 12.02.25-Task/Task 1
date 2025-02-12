@@ -1,0 +1,23 @@
+package Multithreading;
+
+public class PTask1Thread1 extends Thread {
+   public void run() {
+       System.out.println("Thread1 started");
+       System.out.println("Task1 started");
+       System.out.println("Task1 Executed");
+
+    }
+}
+public class main1 {
+    public static void main(String[] args) {
+        PTask1Thread1 p1 = new PTask1Thread1();
+        p1.start();
+        Threads t1 = new Threads();
+        t1.start();
+    }
+}
+class Threads extends Thread {
+    public void run() {
+        System.out.println("Thread 1");
+    }
+}
