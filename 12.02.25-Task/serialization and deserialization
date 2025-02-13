@@ -5,8 +5,7 @@ import java.io.*;
 public class Employee implements Serializable {
     int empno;
     String empname;
-    transient String email;
-
+    transient String email; 
     Employee(int empno, String empname, String email) {
         this.empno = empno;
         this.empname = empname;
@@ -15,42 +14,39 @@ public class Employee implements Serializable {
 
     public void serialize(Employee e1) {
         try {
-            //Creating the object
-
-            //Creating stream and writing the object
             FileOutputStream fout = new FileOutputStream("f.txt");
             ObjectOutputStream out = new ObjectOutputStream(fout);
             out.writeObject(e1);
             out.flush();
-            //closing the stream
             out.close();
-            System.out.println("success");
+            System.out.println("Serialization successful");
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println("Serialization error: " + e);
         }
     }
-    public Employee deserialize() {  // Remove e1 parameter
+
+    public Employee deserialize() {
         Employee e = null;
         try {
             ObjectInputStream in = new ObjectInputStream(new FileInputStream("f.txt"));
-            e = (Employee) in.readObject(); // Corrected Student → Employee
+            e = (Employee) in.readObject();
             in.close();
         } catch (Exception e1) {
-            System.out.println(e1);
+            System.out.println("Deserialization error: " + e1);
         }
-        return e; // Return deserialized object
+        return e;
+    }
+    @Override
+    public String toString() {
+        return "Employee No: " + empno + ", Name: " + empname + ", Email: " + email;
     }
 }
-    
 
-
-    
-
- class empmain {
+class empmain {
     public static void main(String[] args) {
-        Employee e1=new Employee(187,"priya","dharshiniragavan152gmail.com");
+        Employee e1 = new Employee(187, "Priya", "dharshiniragavan15@gmail.com");
         e1.serialize(e1);
-        e1.deserialize();
+        Employee e2 = e1.deserialize();
+        System.out.println( e2);
     }
 }
-
