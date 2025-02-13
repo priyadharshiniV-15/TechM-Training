@@ -1,0 +1,91 @@
+package Collections;
+import java.util.*;
+
+public class MapSample {
+    public static void main(String[] args) {
+        HashMap<Integer, String> hm = new HashMap<>();
+        Hashtable<Integer, String> ht = new Hashtable<>();
+        LinkedHashMap<Integer, String> lh = new LinkedHashMap<>();
+        TreeMap<Integer, String> tm = new TreeMap<>();
+        hashMap(hm);
+        hashTable(ht);
+        LinkedhashMap(lh);
+        treeMap(tm);
+    }
+
+    public static void hashMap(HashMap<Integer, String> hm) {
+        hm.put(1, "one");
+        hm.put(2, "two");
+        hm.put(3, "three");
+        System.out.println("Initial Hashmap hm1 are : "
+                + hm);
+        hm.put(2, "For");
+        System.out.println("Updated Map " + hm);
+        hm.remove(1);
+        System.out.println("Mappings after removal are : "
+                + hm);
+        System.out.println("Map traversal:");
+
+        for (Map.Entry<Integer, String> e : hm.entrySet())
+            System.out.println("Key: " + e.getKey()
+                    + " Value: " + e.getValue());
+        System.out.println("---------------------------------------------------------------------------------");
+    }
+
+    public static void hashTable(Hashtable<Integer, String> ht) {
+        ht.put(1, "one");
+        ht.put(2, "two");
+        ht.put(3, "three");
+        System.out.println("Initial Hashtable ht are : "
+                + ht);
+        ht.put(2, "For");
+        System.out.println("Updated Map " + ht);
+        ht.remove(1);
+        System.out.println("Mappings after removal are : "
+                + ht);
+        System.out.println("Map traversal:");
+
+        for (Map.Entry<Integer, String> e : ht.entrySet())
+            System.out.println("Key: " + e.getKey()
+                    + " Value: " + e.getValue());
+        System.out.println("---------------------------------------------------------------------------------");
+    }
+
+    public static void LinkedhashMap(LinkedHashMap<Integer, String> lh) {
+        lh.put(1, "one");
+        lh.put(2, "two");
+        lh.put(3, "three");
+        System.out.println("Initial linkedHashMap lm are : "
+                + lh);
+        lh.put(2, "For");
+        System.out.println("Updated Map " + lh);
+        lh.remove(1);
+        System.out.println("Mappings after removal are : "
+                + lh);
+        System.out.println("Map traversal:");
+
+        for (Map.Entry<Integer, String> e : lh.entrySet())
+            System.out.println("Key: " + e.getKey()
+                    + " Value: " + e.getValue());
+
+        System.out.println("---------------------------------------------------------------------------------");
+    }
+
+    public static void treeMap(TreeMap<Integer, String> tm) {
+        tm.put(1, "one");
+        tm.put(2, "two");
+        tm.put(3, "three");
+        System.out.println("Initial treeMap tm1 are : "
+                + tm);
+        tm.put(2, "For");
+        System.out.println("Updated Map " + tm);
+        tm.remove(1);
+        System.out.println("Mappings after removal are : "
+                + tm);
+        System.out.println("Map traversal:");
+
+        for (Map.Entry<Integer, String> e : tm.entrySet())
+            System.out.println("Key: " + e.getKey()
+                    + " Value: " + e.getValue());
+    }
+}
