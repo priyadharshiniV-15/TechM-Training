@@ -1,1 +1,24 @@
+package multithreading;
+class ThreadThree extends Thread {
+    @Override
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("From ThreadThree Task 3!");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        
+        ThreadThree t1 = new ThreadThree();
+        ThreadThree t2 = new ThreadThree();
+        ThreadThree t3 = new ThreadThree();
+
+        
+        t1.start();
+        t2.start();
+        t3.start();
+    }
+}
 
