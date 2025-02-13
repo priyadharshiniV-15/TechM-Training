@@ -16,8 +16,4 @@ public class main1 {
         t1.start();
     }
 }
-class Threads extends Thread {
-    public void run() {
-        System.out.println("Thread 1");
-    }
-}
+
