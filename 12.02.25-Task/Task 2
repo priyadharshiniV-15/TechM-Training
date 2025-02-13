@@ -1,0 +1,22 @@
+package Multithreading;
+
+class ThreadTwo extends Thread {
+    @Override
+    public void run() {
+        System.out.println("From ThreadTwo Task2!");
+        System.out.println("From ThreadTwo Task2!");
+        System.out.println(10 / 0);
+    }
+}
+ class Main {
+    public static void main(String[] args) {
+        ThreadTwo t1 = new ThreadTwo();
+        ThreadTwo t2 = new ThreadTwo();
+
+        t1.start();
+        t2.start();
+        ThreadTwo nt = new ThreadTwo();
+        nt.run();
+    }
+}
+
