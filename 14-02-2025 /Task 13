@@ -1,0 +1,11 @@
+let num1=prompt("Enter the first number:")
+num1=Number(num1)
+let num2=prompt("Enter the second number:")
+num2=Number(num2)
+let num3=num2+40
+while(num2<=num3)
+{
+if(num2%num1==0)
+console.log(num2)
+num2++
+}
