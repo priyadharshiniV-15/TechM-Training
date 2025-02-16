@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Alert!!!!</h2>
+
+        <button onclick="alertBox()">alertBox</button>
+        
+        <script>
+            function alertBox() {
+                
+                let address = prompt("Please enter your address:", "Church Road");
+                if (address===null || address === "") {
+                  alert("User cancelled the prompt or entered an empty address.")  
+            }
+            else {
+                
+                alert("Your entered address is : "+address)
+        }
+    }
+            </script>
+    </body>
+</html>
