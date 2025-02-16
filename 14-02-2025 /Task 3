@@ -1,0 +1,15 @@
+const val=prompt("Enter the number:")
+const val1=Number(val)
+  for(let i=2;i<val1;i++)
+  {
+     if(val1%i==0) 
+     {
+    console.log("The number is not a prime!!")
+    break;
+     }
+    else
+    {
+    console.log("The number is prime!!")
+    break;
+    }
+}
