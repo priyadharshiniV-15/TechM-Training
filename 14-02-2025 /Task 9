@@ -1,0 +1,14 @@
+let Year=prompt("Enter the year:")
+Year=Number(Year)
+let Month=["january","february","march","april","may","june","july","august","september","october","november","december"]
+let month=prompt("Enter the month name:")
+if(Year%4==0)
+{
+if( month=="february")
+console.log("The year is leap year and the month is February with 29 days.")
+else
+console.log("The year is leap year and the month is not February.")
+}
+else
+console.log("The given year is not a leap year.")
+
