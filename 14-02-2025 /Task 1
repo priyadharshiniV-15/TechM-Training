@@ -1,0 +1,4 @@
+let n=prompt("Enter a number:")
+n=Number(n);
+let cube=Math.pow(n,3)
+console.log("The cube of given number is: "+cube)
