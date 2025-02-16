@@ -1,0 +1,12 @@
+let num1 = Number(prompt("Enter the first number:"));
+let num2 = Number(prompt("Enter the second number:"));
+if(num2-num1 ==50)
+{
+for(let i=num1;i<=num2;i++)
+{
+if(i%5!=0)
+console.log(i)
+}
+}
+ else 
+    console.log("Invalid input! The second number must be 50 more than the first.");
