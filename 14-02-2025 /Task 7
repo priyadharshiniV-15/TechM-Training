@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Prompt</h2>
+
+<button onclick="myFunction()">Check user's age</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let text;
+  let age = prompt("Please enter your age: ", "18");
+  if (age=== null || age === "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "The User is "+age+" Years old!";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
