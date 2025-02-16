@@ -1,0 +1,26 @@
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Confirm Box</h2>
+
+
+<button onclick="pleaseConfirm()">Check if you are going!</button>
+
+<p id="para1"></p>
+
+<script>
+function pleaseConfirm() {
+  var txt;
+  if (confirm("Will you go to film today?")) {
+    txt = "The User will go to film today!🎬";
+  } else {
+    txt = "The User will not go to film today!❌";
+  }
+  document.getElementById("para1").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
