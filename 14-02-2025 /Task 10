@@ -1,0 +1,17 @@
+let score=prompt("Enter the Maths score:")
+score=Number(score)
+if(score<=100)
+{
+if(score==100)
+console.log("Phenomenol!")
+else if(score>85 && score<100)
+console.log("Excellent!")
+else if(score>=71 && score<=85)
+console.log("Good Work!")
+else if(score>=51 && score<=70)
+console.log("Practice well!")
+else
+console.log("Hard work needed!")
+}
+else
+console.log("Invalid input")
