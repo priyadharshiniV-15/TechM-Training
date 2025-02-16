@@ -1,0 +1,13 @@
+let days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+let Total=0;
+for(let i=0;i<days.length;i++)
+{
+let price=prompt("Enter the price of 1kg Tomato for "+days[i]+" : Rs.")
+price=Number(price)
+Total+=price
+}
+let average=Total/days.length
+if(average>50)
+console.log("Tomato has given good profit.")
+else
+console.log("No profit from Tomato.")
