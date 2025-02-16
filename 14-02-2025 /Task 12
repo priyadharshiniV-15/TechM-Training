@@ -1,0 +1,9 @@
+let num1=prompt("Enter the first number:")
+num1=Number(num1)
+let num2=prompt("Enter the second number:")
+num2=Number(num2)
+console.log("The Multiplication table of "+num1+" and "+num2+" is")
+for(let i=1;i<=num2;i++)
+  {
+console.log(num1+" x "+i+" = "+num1*i )
+}
