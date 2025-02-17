@@ -1,0 +1,34 @@
+//Write another function to access the properties id, name and email and display them. Invoke the function to display the details
+//Add a property called address, as another object, with properties as doorNo, street, area and pincode
+//Add a function to display the details of the student with address.
+//Delete the property email and the function created to display id, name and email.
+
+var student={
+    id:"187",
+    name:"Priya",
+    dept:"ECE",
+    college:"Panimalar",
+    email:"dharshiniragavan15@gmail.com",
+    display:function (){
+    return this.id+" "+this.name+" "+this.email
+}
+}
+function displayStudentDetails() {
+    console.log(student.id + " " + student.name + " " + student.email);
+}
+
+
+var address={
+    doorno:"12/10",
+    street:"RK Street",
+    area:"porur",
+    pincode:"600116"
+}
+
+function displayStudentWithAddress() {
+    console.log( student.id+ " " +student.name+" "+student.dept+" "+student.college+" "+ address.doorno + " " + address.street + " " + address.area + " " + address.pincode);
+}
+
+delete student.email
+delete student.display
+displayStudentWithAddress()
