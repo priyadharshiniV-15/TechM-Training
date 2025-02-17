@@ -1,0 +1,11 @@
+//2. Pass a parameter, and display the factors of that parameter in the function
+let a=Number(prompt("Enter a number:"))
+function factors(a)
+{
+  for(let i=1;i<=a;i++)
+  {
+    if(a%i==0)
+    console.log(i)
+  }
+}
+factors(a)
