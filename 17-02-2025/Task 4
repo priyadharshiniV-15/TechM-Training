@@ -1,0 +1,30 @@
+//Create a arrow function without parameters, to choose the operation among add, subtract, multiply and divide, using switch statement.
+//On choosing the operation, it has to invoke the corresponding method (as expression) with parameters and display the results accordingly, like, sum for add, difference for subtract, product for multiply, quotient and reminder for divide
+let num=Number(prompt("Enter your choice:"))
+let a=6
+let b=3
+let sum = (a, b) => a + b;
+let sub =(a,b)=>a-b;
+let mul=(a,b)=>a*b;
+let div=(a,b)=>a/b;
+let rem=(a,b)=>a%b;
+switch(num)
+{
+    case 1:
+      console.log("The sum of "+a+" and "+b+" is "+sum(a,b))
+      break;
+      case 2:
+          console.log("The difference of "+a+" and "+b+" is "+sub(a,b))
+          break;
+    case 3:
+        console.log("The Multiply of "+a+" and "+b+" is "+mul(a,b))
+          break;
+    case 4:
+        console.log("The Division of "+a+" and "+b+" is "+div(a,b))
+          break;
+    case 5:
+        console.log("The Remainder of "+a+" and "+b+" is "+rem(a,b))
+        break;
+    default:
+       console.log("Invalid choice!")
+}
