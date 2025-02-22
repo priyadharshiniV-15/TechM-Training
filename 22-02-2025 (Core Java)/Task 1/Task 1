@@ -1,3 +1,4 @@
+//Task 1:Writea Javaprogramto copy the alternative elementsinthe array.
 package TASK1;
 
 import java.util.Scanner;
