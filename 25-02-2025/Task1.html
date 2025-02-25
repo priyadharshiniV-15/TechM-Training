@@ -1,0 +1,89 @@
+<div id="root"></div>
+<div id="root1"></div>
+<div id="root2"></div>
+<script
+  crossorigin
+  src="https://unpkg.com/react@18/umd/react.development.js"
+></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+   //Check if a number is divisible by 13. And display the results accordingly
+   function Divisible()
+   {
+    return(
+       <span>Divisible!!</span>
+    )
+   }
+   function NotDivisible()
+   {
+    return(
+        <span>Not-Divisible!!</span>
+    )
+   }
+   //----------------------------------------------------------------------------------------------------------
+   // 1.Using if-else
+   function CheckNumber(props)
+   {
+    const Num=Number(props.isNum);
+    if(Num%13==0)
+   {
+      return(
+    <div>
+        <h3>
+       The given number {Num} is <Divisible/>
+    </h3>
+        </div>
+    );
+   }
+    else{
+    return(
+<div>
+    <h3>The given number {Num} is <NotDivisible/>
+        </h3>
+        </div>
+);
+    }
+   }
+   const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<CheckNumber isNum='39' />); 
+//-----------------------------------------------------------------------------------------------------------------
+// Using Logical &&
+function Checknumber(props)
+{
+    const num=Number(props.num);
+    return(
+        <>
+        { num % 13 === 0 &&
+          <h3>The given number {num} is <Divisible/></h3>
+        }
+        { num % 13 !== 0 &&
+            <h3>The given number {num} is <NotDivisible/></h3>
+
+        }
+        </>
+    );
+   
+    }
+
+const root1 = ReactDOM.createRoot(document.getElementById('root1'));
+root1.render(<Checknumber num= '39' />); 
+
+//-------------------------------------------------------------------------------------------------------------------
+// Using Ternary Operator
+function Checknum(props)
+{
+    const num=Number(props.isNum);
+    return(
+        <div>
+        <h3>The given number {num} is   {num % 13 ===0 ? <Divisible/>:<NotDivisible/>}</h3>
+        </div>
+     );
+}
+const root2 = ReactDOM.createRoot(document.getElementById('root2'));
+root2.render(<Checknum isNum= '38' />); 
+
+
