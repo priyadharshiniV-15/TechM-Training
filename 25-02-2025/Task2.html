@@ -1,0 +1,90 @@
+<div id="root"></div>
+<div id="root1"></div>
+<div id="root2"></div>
+<script
+  crossorigin
+  src="https://unpkg.com/react@18/umd/react.development.js"
+></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    //check if the given string's length is even or odd and display the results
+    function EvenNum()
+    {
+        return(
+        <span>Even!</span>
+        );
+    }
+
+    function OddNum()
+    {
+        return(
+        <span>Odd!</span>
+    );
+    }
+
+    // Using if-else
+
+   function CheckNum(props)
+   {
+    const num=Number(props.value.length);
+
+    if(num %2 ==0)
+   {
+    return (
+        <div>
+        <h2>The size of given String is {num} and it is an <EvenNum/>
+            </h2>
+        </div>
+    );
+   }
+   else{
+    return (
+       
+        <h2>The size of given String is {num} and it is a <OddNum/>
+            </h2>
+       
+    );
+   }
+   }
+   const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<CheckNum value="priya"/>);
+
+//Using logical &&
+
+function CheckNumber(props)
+{
+const num=props.value.length;
+
+return( 
+    <>
+    
+{num%2 ===0 &&
+    <h2> The size of given String is {num} and it is an <EvenNum/> </h2>
+}
+{num%2 !=0 &&
+   <h2>  The size of given String is {num} and it is an <OddNum/> </h2>
+}
+
+</>
+);
+}
+const root1 = ReactDOM.createRoot(document.getElementById('root1'));
+root1.render(<CheckNumber value="Shiv"/>);
+
+// Using Ternary Operator
+
+function Checknumber(props)
+{
+    const num=props.value.length;
+    return(
+        <h2>The size of given String is {num} and it is {num%2 ===0 ? <EvenNum/> :<OddNum/>} </h2>
+    );
+}
+const root2 = ReactDOM.createRoot(document.getElementById('root2'));
+root2.render(<Checknumber value="prathi"/>);
+
+
