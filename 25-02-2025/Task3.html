@@ -1,0 +1,81 @@
+<div id="root"></div>
+<div id="root1"></div>
+<div id="root2"></div>
+<script
+  crossorigin
+  src="https://unpkg.com/react@18/umd/react.development.js"
+></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    /*Check if the given array contains the number of elements, as the multiples of 3. 
+[9,4,24] - The number of elements, in the array is multiple of 3.
+[9,24] - The number of elements, in the array is not the multiple of 3.*/
+
+function Multiple()
+{
+    return <span>a Multiple of 3!</span>;
+}
+function NotMultiple()
+{
+    return <span>Not a Multiple of 3!</span>;
+}
+
+// Using if-else
+
+function CheckArray(props)
+{
+const ar1=props.array.length;
+if(ar1%3 ===0)
+{
+    return(
+        <div>
+            <h2>The given array length is {ar1} and it is <Multiple/></h2> 
+        </div>
+    );
+}
+else{
+    return(
+        <div>
+            <h2>The given array length is {ar1} and it is  <NotMultiple/> </h2>
+        </div>
+    );
+}
+
+}
+const array1=[9,4,24];
+const array2=[9,24];
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<CheckArray array={array2} />); 
+
+//Using Logical &&
+function Checkarray(props)
+{
+const ar=props.array.length;
+return(
+    <div>
+    {ar%3 ===0 &&
+      <h2>The given array length is {ar} and it is  <Multiple/> </h2>
+    }
+    {ar%3 !==0  &&
+        <h2>The given array length is {ar} and it is  <NotMultiple/> </h2>
+    }
+</div>
+);
+}
+const root1 = ReactDOM.createRoot(document.getElementById('root1'));
+root1.render(<Checkarray array={array1} />); 
+
+//Using Ternary Operator
+function Checkarr(props)
+{
+    const num=props.array.length;
+    return(
+        <h2>The given array length is {num} and it is {num%3 ===0 ? <Multiple/>:<NotMultiple/>}</h2>
+    );
+}
+const root2 = ReactDOM.createRoot(document.getElementById('root2'));
+root2.render(<Checkarr array={array2} />);
