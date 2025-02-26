@@ -6,15 +6,12 @@ export default function CardChecker() {
   const [message, setMessage] = useState("");
 
   const checkEligibility = () => {
-    if (hasAadhar || hasPAN) {
-      let availableCards = [];
-      if (hasAadhar) availableCards.push("Aadhar Card");
-      if (hasPAN) availableCards.push("PAN Card");
+    const availableCards =
+      (hasAadhar && hasPAN && "Aadhar Card and PAN Card") ||
+      (hasAadhar && "Aadhar Card") ||
+      (hasPAN && "PAN Card");
 
-      setMessage(`You have: ${availableCards.join(" and ")}.`);
-    } else {
-      setMessage("You do not have Aadhar or PAN card.");
-    }
+    setMessage(availableCards ? `You have: ${availableCards}.` : "You do not have Aadhar or PAN card.");
   };
 
   return (
