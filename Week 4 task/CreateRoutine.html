@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Routine</title>
+    <link rel="stylesheet" href="src/Home.css">
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="CreateRoutine.html">Create Routine</a></li>
+            <li><a href="MyRoutine.html">My Routines</a></li>
+            <li><a href="ProgressTracker.html">Progress Tracker</a></li>
+        </ul>
+    </nav>
+
+    <h1>Create Your Routine 🏋️‍♂️</h1>
+
+    <section class="routine-form-section">
+        <h2>Fill in Your Routine Details</h2>
+        <form id="routineForm">
+            <table class="routine-table">
+                <tr>
+                    <td><label for="exercise">Exercise Name:</label></td>
+                    <td><input type="text" id="exercise" required></td>
+                </tr>
+                <tr>
+                    <td><label for="duration">Duration (mins):</label></td>
+                    <td><input type="number" id="duration" required></td>
+                </tr>
+                <tr>
+                    <td><label for="reps">Reps:</label></td>
+                    <td><input type="number" id="reps" required></td>
+                </tr>
+                <tr>
+                    <td><label for="category">Category:</label></td>
+                    <td>
+                        <select id="category">
+                            <option value="Cardio">Cardio</option>
+                            <option value="Strength">Strength</option>
+                            <option value="Flexibility">Flexibility</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="table-center">
+                    <td colspan="2">
+                        <button type="submit" class="cta-button">Add to My Routines</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 SweatUp. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("routineForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            
+            let exercise = document.getElementById("exercise").value;
+            let duration = document.getElementById("duration").value;
+            let reps = document.getElementById("reps").value;
+            let category = document.getElementById("category").value;
+
+           
+            let newRoutine = { exercise, duration, reps, category };
+
+            
+            let routines = JSON.parse(localStorage.getItem("routines")) || [];
+
+            
+            routines.push(newRoutine);
+
+           
+            localStorage.setItem("routines", JSON.stringify(routines));
+
+            
+            document.getElementById("routineForm").reset();
+
+            alert("Routine added successfully!");
+        });
+    </script>
+
+</body>
+</html>
