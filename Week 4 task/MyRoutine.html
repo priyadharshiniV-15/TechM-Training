@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Routines</title>
+    <link rel="stylesheet" href="src/Home.css" />
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="CreateRoutine.html">Create Routine</a></li>
+        <li><a href="MyRoutine.html">My Routines</a></li>
+        <li><a href="ProgressTracker.html">Progress Tracker</a></li>
+      </ul>
+    </nav>
+
+    <h1>My Routines 📅</h1>
+    <div class="container">
+      <section class="routine-list-section">
+        <h2>Saved Workout Plans</h2>
+        <table class="routine-table">
+          <thead>
+            <tr>
+              <th>Exercise Name</th>
+              <th>Duration (mins)</th>
+              <th>Reps</th>
+              <th>Category</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="routinesContainer">
+          </tbody>
+        </table>
+        <br />
+        <button class="cta-button" onclick="clearRoutines()">
+          Clear All Routines
+        </button>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <p>© 2025 SweatUp. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", displayRoutines);
+      function displayRoutines() {
+        let routines = JSON.parse(localStorage.getItem("routines")) || [];
+        let tableBody = document.getElementById("routinesContainer");
+
+        tableBody.innerHTML = ""; 
+
+        if (routines.length === 0) {
+          tableBody.innerHTML =
+            "<tr><td colspan='5' style='text-align:center;'>No routines found. Add routines from 'Create Routine'!</td></tr>";
+          return;
+        }
+
+        routines.forEach((routine, index) => {
+          let row = document.createElement("tr");
+
+          row.innerHTML = `
+            <td><b>${routine.exercise}</b></td>
+            <td>${routine.duration} mins</td>
+            <td>${routine.reps}</td>
+            <td>${routine.category}</td>
+            <td><button onclick="deleteRoutine(${index})">❌ Delete</button></td>
+        `;
+
+          tableBody.appendChild(row);
+        });
+      }
+
+      
+      function deleteRoutine(index) {
+        let routines = JSON.parse(localStorage.getItem("routines")) || [];
+        routines.splice(index, 1); 
+        localStorage.setItem("routines", JSON.stringify(routines)); 
+        location.reload(); 
+      }
+    </script>
+  </body>
+</html>
