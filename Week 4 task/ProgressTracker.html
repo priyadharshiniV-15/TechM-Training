@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracker</title>
+    <link rel="stylesheet" href="src/Home.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="CreateRoutine.html">Create Routine</a></li>
+            <li><a href="MyRoutine.html">My Routines</a></li>
+            <li><a href="ProgressTracker.html">Progress Tracker</a></li>
+        </ul>
+    </nav>
+
+    <h1>Progress Tracker 📊</h1>
+
+    <section class="progress-container">
+        <h2>Workout History</h2>
+        <table class="progress-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Exercise</th>
+                    <th>Duration (mins)</th>
+                    <th>Reps</th>
+                </tr>
+            </thead>
+            <tbody id="progressContainer">
+            </tbody>
+        </table>
+
+        <h2>Progress Chart</h2>
+        <canvas id="progressChart"></canvas>
+    </section>
+
+
+    <footer class="footer">
+        <p>© 2025 SweatUp. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", displayProgress);
+
+        function displayProgress() {
+            let routines = JSON.parse(localStorage.getItem("routines")) || [];
+            let tableBody = document.getElementById("progressContainer");
+
+            tableBody.innerHTML = ""; 
+
+            if (routines.length === 0) {
+                tableBody.innerHTML = "<tr><td colspan='4' style='text-align:center;'>No workout history found.</td></tr>";
+                return;
+            }
+
+            let labels = [];
+            let durations = [];
+
+            routines.forEach(routine => {
+                let date = new Date().toLocaleDateString(); 
+                labels.push(routine.exercise);
+                durations.push(routine.duration);
+
+                let row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${date}</td>
+                    <td><b>${routine.exercise}</b></td>
+                    <td>${routine.duration} mins</td>
+                    <td>${routine.reps}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+
+            renderChart(labels, durations);
+        }
+
+        function renderChart(labels, data) {
+            let ctx = document.getElementById("progressChart").getContext("2d");
+
+            new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: "Workout Duration (mins)",
+                        data: data,
+                        backgroundColor: "rgba(54, 162, 235, 0.6)",
+                        borderColor: "rgba(54, 162, 235, 1)",
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
