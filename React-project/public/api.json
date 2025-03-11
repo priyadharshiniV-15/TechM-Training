@@ -1,0 +1,142 @@
+ [
+    {
+      "name": "Blushing Rose Bouquet",
+      "price": 25.99,
+      "rating": 4.8,
+      "image": "images/blush.webp",
+      "description": "A charming blend of pink roses for a romantic touch."
+    },
+    {
+      "name": "Golden Sunset Tulips",
+      "price": 18.99,
+      "rating": 4.5,
+      "image": "images/gold.webp",
+      "description": "Bright and cheerful tulips that bring warmth to any room."
+    },
+    {
+      "name": "Sunshine Daisies",
+      "price": 15.49,
+      "rating": 4.6,
+      "image": "images/daisy.webp",
+      "description": "A delightful collection of daisies in vibrant colors."
+    },
+    {
+      "name": "Orchid Charm",
+      "price": 32.99,
+      "rating": 4.9,
+      "image": "images/orchids.webp",
+      "description": "Elegant orchids perfect for special occasions."
+    },
+    {
+      "name": "Lavender Bliss",
+      "price": 21.99,
+      "rating": 4.7,
+      "image": "images/lavender.webp",
+      "description": "A calming blend of lavender flowers for relaxation."
+    },
+    {
+      "name": "Peach Petal Perfection",
+      "price": 28.99,
+      "rating": 4.8,
+      "image": "images/peach.webp",
+      "description": "Peach-toned blooms designed to brighten your day."
+    },
+    {
+      "name": "Elegant Lily Assortment",
+      "price": 29.99,
+      "rating": 4.9,
+      "image": "images/lillies.webp",
+      "description": "A luxurious mix of fragrant lilies in soft hues."
+    },
+    {
+      "name": "Winter Wonderland",
+      "price": 34.99,
+      "rating": 4.7,
+      "image": "images/winter.webp",
+      "description": "A frosty yet festive floral arrangement perfect for winter decor."
+    },
+    {
+      "name": "Rainbow Radiance",
+      "price": 22.99,
+      "rating": 4.5,
+      "image": "images/rainbow.webp",
+      "description": "A vibrant mix of rainbow-colored flowers."
+    },
+    {
+      "name": "Spring Garden Bliss",
+      "price": 26.99,
+      "rating": 4.8,
+      "image": "images/spring.webp",
+      "description": "A delightful burst of spring flowers in pastel shades."
+    },
+    {
+      "name": "Autumn Harvest Bouquet",
+      "price": 27.49,
+      "rating": 4.7,
+      "image": "images/autumn.webp",
+      "description": "Warm autumn colors that capture the season's beauty."
+    },
+    {
+      "name": "Crimson Charm",
+      "price": 30.99,
+      "rating": 4.9,
+      "image": "images/crimson.webp",
+      "description": "A striking bouquet of deep red roses."
+    },
+    {
+      "name": "Pink Paradise",
+      "price": 20.49,
+      "rating": 4.6,
+      "image": "images/pink.webp",
+      "description": "A sweet and soft arrangement of pink blossoms."
+    },
+    {
+      "name": "Classic White Elegance",
+      "price": 35.99,
+      "rating": 4.9,
+      "image": "images/white.webp",
+      "description": "Pure white blooms perfect for weddings or formal events."
+    },
+    {
+      "name": "Golden Glow",
+      "price": 24.99,
+      "rating": 4.8,
+      "image": "images/golden.webp",
+      "description": "Bright golden flowers that add warmth to your home."
+    },
+    {
+      "name": "Rosy Romance",
+      "price": 19.49,
+      "rating": 4.5,
+      "image": "images/rosy.webp",
+      "description": "A romantic combination of red and pink roses."
+    },
+    {
+      "name": "Vibrant Violet Vibes",
+      "price": 23.99,
+      "rating": 4.7,
+      "image": "images/violet.webp",
+      "description": "Purple tones that express elegance and mystery."
+    },
+    {
+      "name": "Garden of Dreams",
+      "price": 37.49,
+      "rating": 4.9,
+      "image": "images/garden.webp",
+      "description": "A dreamy mix of pastel-colored blooms."
+    },
+    {
+      "name": "Sunflower Delight",
+      "price": 16.99,
+      "rating": 4.6,
+      "image": "images/sunflower.webp",
+      "description": "Bright yellow sunflowers that light up any space."
+    },
+    {
+      "name": "Carnation Crush",
+      "price": 22.49,
+      "rating": 4.5,
+      "image": "images/carnation.webp",
+      "description": "Charming carnations with a sweet fragrance."
+    }
+  ]
