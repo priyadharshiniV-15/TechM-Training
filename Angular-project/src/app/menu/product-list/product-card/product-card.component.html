@@ -1,0 +1,16 @@
+<div class="product-card card shadow-sm">
+    <img
+        src="http://localhost:8090/{{ flower.image }}"
+        class="card-img-top"
+        alt="flower Image"
+    />
+    <div class="card-body text-center">
+        <h3 class="card-title">{{ flower.name }}</h3>
+        <p class="card-text">{{ flower.description }}</p>
+        <p class="card-text"><strong>Price:</strong> ${{ flower.price }}</p>
+        <p class="card-text"><strong>Rating:</strong> ⭐ {{ flower.rating }}</p>
+        <button class="btn btn-success w-100 mt-2" (click)="addToCart()">
+            🛒 Add to Cart
+        </button>
+    </div>
+</div>

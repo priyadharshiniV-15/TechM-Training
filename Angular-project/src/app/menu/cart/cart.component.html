@@ -1,0 +1,27 @@
+<div class="cart-container">
+  <div *ngIf="cartItems.length; else emptyCart">
+    <div class="cart-item" *ngFor="let item of cartItems">
+      <img [src]="'http://localhost:8090/' + item.image" 
+           alt="{{ item.name }}" 
+           class="product-image"
+           (error)="handleImageError(item)" />
+      <div class="item-details">
+        <h3>{{ item.name }}</h3>
+        <p>Price: ${{ item.price }}</p>
+      </div>
+      <button class="remove-btn" (click)="removeFromCart(item)">Remove</button>
+    </div>
+    <div class="checkout-container">
+      <div class="total-price">
+        Total: ${{ getTotalPrice() | number:'1.2-2' }}
+      </div>
+      <button class="checkout-btn" (click)="checkout()">Checkout</button>
+    </div>
+    
+  </div>
+  
+  
+  <ng-template #emptyCart>
+    <p class="empty-cart-msg">Your cart is empty. Start adding some beautiful flowers! 🌸</p>
+  </ng-template>
+</div>

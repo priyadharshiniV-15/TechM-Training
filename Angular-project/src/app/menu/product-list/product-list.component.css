@@ -1,0 +1,50 @@
+/* Search Input Styling */
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left:60px;
+    margin-right: 10px;
+    border: 2px solid palevioletred;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    transition: border 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    border-color: pink;
+
+}
+
+/* Product List Styling */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Name */
+.product-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d54a94;
+    margin-top: 10px;
+}

@@ -1,0 +1,65 @@
+.about-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    border: 3px solid palevioletred;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #fff0f5;
+    text-align: center;
+}
+
+h2, h3 {
+    color: palevioletred;
+}
+
+p, ul {
+    color: #555;
+    line-height: 1.6;
+}
+
+ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.journey-section, 
+.why-choose-us,
+.testimonials-section,
+.fun-facts {
+    background-color: #ffe4e1;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial {
+    background-color: #fff;
+    border-left: 4px solid palevioletred;
+    padding: 10px;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.cta-banner {
+    background-color: palevioletred;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.cta-banner button {
+    background-color: #fff;
+    color: palevioletred;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cta-banner button:hover {
+    background-color: #f8f0f0;
+}

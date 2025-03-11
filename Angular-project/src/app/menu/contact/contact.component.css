@@ -1,0 +1,74 @@
+.contact-container {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 25px;
+    border: 3px solid palevioletred;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff0f5;  /* Soft pink background */
+}
+
+h2 {
+    text-align: center;
+    color: palevioletred;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid palevioletred;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: border 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #d87093;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    background-color: palevioletred;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #d87093;
+}
+
+button:disabled {
+    background-color: pink;
+    cursor: not-allowed;
+}

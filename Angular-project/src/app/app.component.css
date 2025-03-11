@@ -1,0 +1,30 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1; /* Ensures content expands to fill available space */
+}
+
+footer {
+  background: linear-gradient(135deg, #ffb6c1, #ff69b4); /* Soft gradient */
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for lift effect */
+}
+footer p {
+  font-family: "Dancing Script", cursive; /* Adds a stylish touch */
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
