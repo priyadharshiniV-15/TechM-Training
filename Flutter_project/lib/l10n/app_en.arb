@@ -1,0 +1,8 @@
+{
+  "weatherAppTitle": "Weather App",
+  "searchPlaceholder": "Enter city name...",
+  "getWeather": "Get Weather",
+  "temperature": "{temp}°C",
+  "weathercondition": "{condition}",
+  "moreDetails": "More Details"
+}
