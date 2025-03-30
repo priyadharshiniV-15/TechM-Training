@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class WeatherProvider extends ChangeNotifier {
-  String apiKey = "474516e9f1b0518678e8b7806b45c5de";
+  String apiKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
   Map<String, dynamic> _weatherData = {};
   List<dynamic> _forecastData = []; // Store forecast data
   bool _isLoading = false;
